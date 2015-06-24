@@ -12,11 +12,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.malsolo.springframework.samples.wasken.domain.Location;
-import com.malsolo.springframework.samples.wasken.repository.DataConfig;
+import com.malsolo.springframework.samples.wasken.repository.DataJpaConfig;
 import com.malsolo.springframework.samples.wasken.service.LocationService;
 
 @Configuration
-@Import(DataConfig.class)
+@Import(DataJpaConfig.class)
 @ComponentScan(excludeFilters = { @Filter(type = FilterType.ANNOTATION, value = Controller.class), @Filter(type = FilterType.ANNOTATION, value = RestController.class) })
 public class RootConfig {
 	
