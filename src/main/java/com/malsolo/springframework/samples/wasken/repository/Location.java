@@ -1,5 +1,7 @@
 package com.malsolo.springframework.samples.wasken.repository;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.validation.constraints.NotNull;
@@ -33,4 +35,7 @@ public class Location {
 	@NotNull
 	@Size(min = 2, max = 3)
 	private String iata;
+	
+	@NotNull
+	private Timestamp creationdate;
 }

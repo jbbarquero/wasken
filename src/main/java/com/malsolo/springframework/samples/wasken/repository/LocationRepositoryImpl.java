@@ -1,5 +1,6 @@
 package com.malsolo.springframework.samples.wasken.repository;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -25,9 +26,26 @@ public class LocationRepositoryImpl implements LocationRepositoryCustom {
 							rs.getString("thekey"),
 							rs.getString("name"),
 							rs.getString("locationtype"),
-							rs.getString("iata")
+							rs.getString("iata"),
+							rs.getTimestamp("creationdate")
 							)
 				, theKey
+				);
+	}
+
+	@Override
+	public List<Location> doStuffWithDates(Date from, Date to) {
+		return this.jdbcTemplate.query(
+				"select * from location where creationdate between ? and ? "
+				, (rs, rowNum) -> new Location(
+							rs.getLong("id"),
+							rs.getString("thekey"),
+							rs.getString("name"),
+							rs.getString("locationtype"),
+							rs.getString("iata"),
+							rs.getTimestamp("creationdate")
+							)
+				, from, to
 				);
 	}
 

@@ -1,3 +1,3 @@
-insert into Location (id, thekey, name, locationtype, iata) values (1, '12345', '00000000000000000001', 'Location 1', 'LO1');
-insert into Location (id, thekey, name, locationtype, iata) values (2, '54321', '00000000000000000002', 'Location 2', 'LO2');
-insert into Location (id, thekey, name, locationtype, iata) values (3, '55555', '00000000000000000003', 'Location 3', 'LO3');
+insert into Location (id, thekey, name, locationtype, iata, creationdate) values (1, '12345', '00000000000000000001', 'Location 1', 'LO1', '2015-06-24 20:30:40');
+insert into Location (id, thekey, name, locationtype, iata, creationdate) values (2, '54321', '00000000000000000002', 'Location 2', 'LO2', '2015-06-24 21:30:40');
+insert into Location (id, thekey, name, locationtype, iata, creationdate) values (3, '55555', '00000000000000000003', 'Location 3', 'LO3', '2015-06-24 22:30:40');
